@@ -1,0 +1,171 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>《剑网3》团队事件监控插件官方站</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="团队事件监控,团队监控,事件监控,剑网3,剑3,插件,剑网3插件,PVE插件,团队插件,副本插件" />
+    <meta name="author" content="临梧@梦江南(Webster Chen)" />
+    <meta name="Description" content="《剑网3》团队事件监控: 剑侠情缘3/剑三最好用的 PVE 辅助插件，提供最新团队事件监控插件下载，更新日志，安史之乱副本最新数据，配置文件，使用教程等，专注于PVE。" />
+    <!--[if lt IE 9]>
+        <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+    <!--<![endif]-->
+    <link rel="stylesheet" href="./static/index/common.css?v0.22" />
+    <script src="./static/index/common.js?v0.22"></script>
+    <script src="./static/index/member.js?v0.22"></script>
+</head>
+<body>
+
+
+    <div class="header">
+        <!-- logo -->
+        <div class="header-logo">
+            <a href="#index" class="header-logo-icon" target="_top"></a>
+            <a href="#index" class="header-logo-text" target="_self">
+                <em>官网首页</em>
+            </a>
+        </div>
+        <!-- nav -->
+        <div class="header-nav">
+            <a item_identifier="log" href="#log" class="header-nav-link">
+                <em></em>
+                <font><span>更新日志</span></font>
+            </a>
+        </div>
+        <div class="header-nav">
+            <a item_identifier="about" href="#about" class="header-nav-link">
+                <em></em>
+                <font><span>关于插件</span></font>
+            </a>
+        </div>
+        <div class="header-nav">
+            <a item_identifier="ranklist" href="#ranklist" class="header-nav-link">
+                <em></em>
+                <font><span>排行榜</span></font>
+            </a>
+        </div>
+        <div class="header-nav">
+            <a href="http://s.j3ui.com" class="header-nav-link" target="_target">
+                <em></em>
+                <font><span>数据搜索</span></font>
+            </a>
+        </div>
+        <div class="header-nav">
+            <a href="http://weibo.com/techvicky" class="header-nav-link" target="_target">
+                <em></em>
+                <font><span>作者微博</span></font>
+            </a>
+        </div>
+        <div class="header-nav">
+            <a target="_blank" class="header-nav-link" href="http://shang.qq.com/wpa/qunwpa?idkey=f0d85d024758823c52ab32ff6a43917c65017672f04f45dd3d431e4db6a3d38b">
+                <em></em>
+                <font><span>加入卖萌群</span></font>
+            </a>
+        </div>
+
+        <!-- member -->
+        <div class="header-info">
+            <div id="header-info-users">
+                <a href="#member" item_identifier="member" class="header-nav-link">
+                    <em></em>
+                    <font><span></span></font>
+                </a>
+            </div>
+            <div id="header-info-login">
+                <a item_identifier="login" href="#login" class="header-nav-link">
+                    <em></em>
+                    <font><span>登陆</span></font>
+                </a>
+                <a href="http://forum.j3ui.com/member.php?mod=register" class="header-nav-link">
+                    <em></em>
+                    <font><span>注册</span></font>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="navbar">
+            <div class="navbar-title">团队事件监控</div>
+            <ul class="navbar-nav">
+                <li item_identifier="index"><a href="#index"><i></i>首页</a></li>
+                <li item_identifier="download"><a href="#download"><i></i>下载和帮助</a></li>
+                <li item_identifier="upload"><a href="#upload"><i></i>数据上传</a></li>
+                <li item_identifier="config"><a href="#config"><i></i>配置文件</a></li>
+                <li item_identifier="TAG"><a href="#TAG"><i></i>数据编辑</a></li>
+                <li item_identifier="member"><a href="#member"><i></i>用户中心</a></li>
+                <li item_identifier="unpak"><a href="#unpak"><i></i>福利</a></li>
+                <li><a href="http://forum.j3ui.com"><i></i>论坛</a></li>
+            </ul>
+            <div class="navbar-buttons"></div>
+        </div>
+    </div>
+
+
+    <div class="container" id="load">
+        <div class="content">
+            <div class="circle"></div>
+            <div class="circle1"></div>
+        </div>
+    </div>
+
+    <!-- body -->
+    <div class="body">
+        <div class="main">
+            <h4>配置文件</h4>
+        </div>
+        <div class="main-center">
+            <ul class="f-tal" style="color: #999;">
+                <li>将下载后将文件放入 <span class="f-coa">interface\RaidGrid_EventScrutiny\alldat</span> 目录内。</li>
+                <li>然后点击团队事件监控面板上的小齿轮 &gt; 导入导出相关 &gt; 加载配置文件（合并或覆盖均可） &gt; 输入完整的文件名点击确定即可。</li>
+                <li>如果下载的带本数据的插件，直接覆盖所有文件即可！</li>
+                <li>当然，推荐你在游戏内使用自助更新来使用此功能<span class="f-coa">右键头像可以找到，无需下载文件</span>。</li>
+            </ul>
+            <a class="brick-btn2 brick-btn2-blue" href="javascript:;" onclick="LoadAjaxData(GetConfig,90)" title="刷新90年代数据">查看90年代数据</a>
+            <a class="brick-btn2 brick-btn2-blue" href="javascript:;" onclick="LoadAjaxData(GetConfig,80)" title="查看旧时代数据">查看旧时代数据</a>
+            <a class="brick-btn2 brick-btn2-red" href="http://www.j3ui.com/#member" title="发布配置文件">上传配置文件</a>
+        </div>
+        <table cellpadding="0" cellspacing="0" width="100%" class="brick-table2">
+            <thead>
+                <tr>
+                    <th class="ta-c" width="14%">作者</th>
+                    <th class="ta-c" width="70%">标题</th>
+                    <th class="ta-c" width="15%">最后更新时间</th>
+                </tr>
+            </thead>
+            <tbody id="ajax_config"></tbody>
+        </table>
+    </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-link">
+            <h3>常用网站&amp;友情链接</h3>
+            <ul>
+                <li class="footer-link-a1"><a title="剑三官网" href="http://jx3.xoyo.com/" target="_blank">剑三官网首页</a></li>
+                <li class="footer-link-a2"><a title="剑三盒子插件" href="http://jx3.duowan.com/yy/" target="_blank">多玩剑三盒子</a></li>
+                <li class="footer-link-a5"><a title="海鳗PVP插件" href="http://haimanchajian.com/" target="_blank">海鳗插件</a></li>
+                <li class="footer-link-a9"><a title="找宏真方便" href="http://www.jx3pve.com/" target="_blank">剑三副本</a></li>
+                <li class="footer-link-a7"><a title="玩家制作开发的计算查询网站" href="http://paiba.me/jx3/" target="_blank">剑网三应用</a></li>
+                <li class="footer-link-a8"><a title="西山居技术中心" href="http://tech.seasungame.com/forum.php" target="_blank">西山居技术中心论坛</a></li>
+                <li class="footer-link-a2"><a title="游戏媒体多玩" href="http://jx3.duowan.com/" target="_blank">多玩剑网3</a></li>
+                <li class="footer-link-a3"><a title="剑网三贴吧" href="http://tieba.baidu.com/f?ie=utf-8&amp;kw=%E5%89%91%E7%BD%913" target="_blank">818专区</a></li>
+                <li class="footer-link-a3"><a title="西山居贴吧" href="http://tieba.baidu.com/f?ie=utf-8&amp;kw=%E8%A5%BF%E5%B1%B1%E5%B1%85" target="_blank">西山居贴吧</a></li>
+                <li class="footer-link-a6"><a title="为本站提供CDN静态加速服务" href="http://www.qiniu.com/" target="_blank">七牛云存储</a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <a href="http://weibo.com/techvicky" target="_blank">这是一个有节操的网站</a> | 插件官方交流YY群 <span class="f-coa">6561601</span> | 交流卖萌QQ群 <span class="f-coa">372551143</span> | 策划坑爹本插件不坑爹请放心使用 <br>
+        </div>
+        <span style="display:none">
+            <script src="http://s9.cnzz.com/stat.php?id=4418810&amp;web_id=4418810"></script>
+        </span>
+    </div>
+    <input type="hidden" id="url" value="index" />
+</body>
+</html>
