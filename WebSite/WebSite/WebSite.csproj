@@ -57,6 +57,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\getConfigData.aspx" />
+    <Content Include="static\images\tit_bg_hd.gif" />
+    <Content Include="static\index\chosen-sprite.png" />
+    <Content Include="static\index\chosen.css" />
+    <Content Include="static\index\chosen.jquery.min.js" />
+    <Content Include="static\index\css.css" />
+    <Content Include="static\index\iscroll.js" />
+    <Content Include="static\index\jquery-1.7.1.min.js" />
+    <Content Include="tid_view.html" />
+    <Content Include="views\gf_view.htm" />
     <Content Include="GF_View.html" />
     <Content Include="static\index\common.css" />
     <Content Include="static\index\common.js" />
@@ -66,6 +76,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ajaxlibrary.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Data\getConfigData.aspx.cs">
+      <DependentUpon>getConfigData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Data\getConfigData.aspx.designer.cs">
+      <DependentUpon>getConfigData.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +95,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Lib\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
