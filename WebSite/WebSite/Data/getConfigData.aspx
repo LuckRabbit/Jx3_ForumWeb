@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="getConfigData.aspx.cs" Inherits="WebSite.Data.getConfigData" %>

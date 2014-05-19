@@ -1,0 +1,31 @@
+﻿<div class="body-title">
+    <h4>游戏内置论坛的网页版</h4>
+</div>
+<div class="main-center">
+    <ul class="f-tal" style="color: #999;">
+        <li>这其实是个闲来无聊的东西</li>
+        <li><!--<img src="http://img.j3ui.com/cache/images/s2.jpg">--> 好羞涩_(:з」∠)_</li>
+    </ul>
+    <select data-placeholder="请选择大区..." style="width:350px;position:absolute" id="serverlist" class="chosen-select" tabindex="6">
+        <option value="0">全区全服</option>
+    </select>
+        <!--<a class="brick-btn2 brick-btn2-blue" href="javascript:;" onclick="" title="">查看90年代数据</a>-->
+        
+        <!--<a class="brick-btn2 brick-btn2-red" href="http://www.j3ui.com/#member" title="发布配置文件">上传配置文件</a>-->
+    <select data-placeholder="请选择分类..." class="chosen-select" id="typelist" multiple style="width:350px;" tabindex="2">
+        <option value="0">所有分类</option>
+    </select>
+    <a class="brick-btn2 brick-btn2-red" href="javascript:;" onclick="LoadAjaxData(GetForumList)" title="刷新">刷新</a>
+</div>
+<div>
+</div>
+<table cellpadding="0" cellspacing="0" width="100%" class="brick-table2">
+    <thead>
+        <tr>
+            <th class="ta-c" width="14%">作者</th>
+            <th class="ta-c" width="70%">标题</th>
+            <th class="ta-c" width="15%">最后更新时间</th>
+        </tr>
+    </thead>
+    <tbody id="ajax_config"></tbody>
+</table>
