@@ -18,10 +18,11 @@
                 b += '</optgroup>'
             }),
             $("#serverlist").html(b),
-            b = '<option value=""></option>';
+            b = '<option value=""></option><optgroup label="组队分类"><option>秦皇陵</option><option>风雪稻香村</option><option>血战天策</option><option>战宝军械库</option><option>大明宫</option><option>南诏皇宫</option><option>持国天王回忆录</option><option>会战唐门</option><option>烛龙殿</option><option>荻花洞窟</option><option>龙渊泽</option><option>荻花圣殿</option></optgroup><optgroup label="其他分类">';
             $.each(data.MenuList, function (i) {
                 b += '<option>' + data.MenuList[i] + '</option>'
             }),
+            b += '</optgroup>',
             $("#typelist").html(b);
             $("#typelist").show().chosen();
             $("#serverlist").show().chosen();
@@ -34,11 +35,19 @@
         }
     })
 }
+open_pic = function () {
+    //alert(1);
+    $("body").append('<div class="big_img"><div class="ggp_img"></div><div class="ggp_close">×</div><div class="body_bg"></div></div>'),
+    $(".ggp_img").load("views/login.html"),
+    $(".ggp_close").click(function (e) {
+        $(".big_img").remove();
+    });
+}
 OpenListWindow = function (tid) {
     var iTop = (window.screen.availHeight - 30 - 570) / 2;
     //获得窗口的水平位置
     var iLeft = (window.screen.availWidth - 10 - 610) / 2;
-    window.open('tid_view.html?tid=' + tid, 'newwindow', 'height=570,width=610,top=' + iTop + ',left=' + iLeft + ',toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no');
+    window.open('tid_view.html?tid=' + tid, tid, 'height=570,width=610,top=' + iTop + ',left=' + iLeft + ',toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no');
 }
 var colors = new Array(11);
 colors[0] = "255, 255, 255",
@@ -110,15 +119,22 @@ GetForumList = function (a, b) {
                     d = "";
                 $.each(data.data, function (i) {
                     if (data.data[i]["col"] != null) {
-                        d += '<tr style="color:rgb(' + data.data[i]["col"] + ')"><td>' + data.data[i]["a"] + '</td><td><a style="color:rgb(' + data.data[i]["col"] + ')" href="javascript:;" onclick="OpenListWindow(' + data.data[i]["tid"] + ')">' + data.data[i]["m"] + '</a></td><td class="ta-c">' + TimeToDate(new Date().getTime()) + '</td>'
+                        //d += '<tr style="color:rgb(' + data.data[i]["col"] + ')"><td>' + data.data[i]["a"] + '</td><td><a style="color:rgb(' + data.data[i]["col"] + ')" href="javascript:;" onclick="OpenListWindow(' + data.data[i]["tid"] + ')">' + data.data[i]["m"] + '</a></td><td class="ta-c">' + TimeToDate(new Date().getTime()) + '</td>'
+                        d += '<tr><td>' + images[data.data[i]["s"]] + data.data[i]["a"] + '</td><td><a href="javascript:;" onclick="OpenListWindow(' + data.data[i]["tid"] + ')">' + data.data[i]["m"] + '</a></td><td class="ta-c">' + TimeToDate(new Date().getTime()) + '</td>'
                     }
                     else {
-                        d += '<tr style="color:rgb(' + colors[data.data[i]["s"]] + ')"><td>' + data.data[i]["a"] + '</td><td><a style="color:rgb(' + colors[data.data[i]["s"]] + ')" href="javascript:;" onclick="OpenListWindow(' + data.data[i]["tid"] + ')">' + data.data[i]["m"] + '</a></td><td class="ta-c">' + TimeToDate(data.data[i]["t"]) + '</td>'
+                        d += '<tr><td>' + images[data.data[i]["s"]] + data.data[i]["a"] + '</td><td><a href="javascript:;" onclick="OpenListWindow(' + data.data[i]["tid"] + ')">' + data.data[i]["m"] + '</a></td><td class="ta-c">' + TimeToDate(data.data[i]["t"]) + '</td>'
                     }
                 }),
                 $("#ajax_config").html(c + d);
             }
         })
+    }
+    var localauthor = $.cookie('username');
+    //alert(localauthor);
+    if (localauthor != null) {
+        //alert(localauthor);
+        $("#btn_login").css("display","none");
     }
 }
 function str2asc(strstr) {

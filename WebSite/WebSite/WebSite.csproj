@@ -39,6 +39,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -58,14 +62,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\getConfigData.aspx" />
+    <Content Include="Data\postReplyData.aspx" />
+    <Content Include="Data\saveLoginData.aspx" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="Lib\Newtonsoft.Json.dll" />
+    <Content Include="static\images\point_blue.gif" />
     <Content Include="static\images\tit_bg_hd.gif" />
+    <Content Include="static\images\tit_bg_qm.gif" />
     <Content Include="static\index\chosen-sprite.png" />
     <Content Include="static\index\chosen.css" />
     <Content Include="static\index\chosen.jquery.min.js" />
     <Content Include="static\index\css.css" />
     <Content Include="static\index\iscroll.js" />
     <Content Include="static\index\jquery-1.7.1.min.js" />
+    <Content Include="static\index\jquery.cookie.js" />
+    <Content Include="static\index\tidview.js" />
+    <Content Include="static\index\UNIC-GBK.js" />
     <Content Include="tid_view.html" />
+    <Content Include="uncode.aspx" />
     <Content Include="views\gf_view.htm" />
     <Content Include="GF_View.html" />
     <Content Include="static\index\common.css" />
@@ -73,6 +87,7 @@
     <Content Include="static\index\game_forum.js" />
     <Content Include="static\index\jquery.min.js" />
     <Content Include="static\index\member.js" />
+    <Content Include="views\login.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -86,7 +101,29 @@
     <Compile Include="Data\getConfigData.aspx.designer.cs">
       <DependentUpon>getConfigData.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Data\postReplyData.aspx.cs">
+      <DependentUpon>postReplyData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Data\postReplyData.aspx.designer.cs">
+      <DependentUpon>postReplyData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\saveLoginData.aspx.cs">
+      <DependentUpon>saveLoginData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Data\saveLoginData.aspx.designer.cs">
+      <DependentUpon>saveLoginData.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uncode.aspx.cs">
+      <DependentUpon>uncode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uncode.aspx.designer.cs">
+      <DependentUpon>uncode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
@@ -96,9 +133,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Lib\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

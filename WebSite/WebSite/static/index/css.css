@@ -11,7 +11,7 @@ img{border:none;}
 .right{float:right;}
 .hide{display:none;}
 .main{margin:10px;}
-.hudong_tit{height: 50px;border-radius: 5px 5px 0 0;font-size: 2em;line-height: 48px;color: #fff; text-align:center;background: #49aded url(../images/tit_bg_hd.gif) repeat-x;background-size:7px 50px; position:relative;}
+.hudong_tit{height: 50px;border-radius: 5px 5px 0 0;font-size: 2em;line-height: 48px;color: #fff; text-align:center;background: #49aded url(../images/tit_bg_qm.gif) repeat-x;background-size:7px 50px; position:relative;}
 .views{ width:100%; font-size:1.8em; overflow:auto;}
 .views .views_time{ background-color:#afafaf; border-radius:5px; text-align:center; width:100px; margin:15px auto 0 auto; color:#fff; font-size:0.8em;}
 .views .views_1 dt{ color:#636363;}
@@ -23,14 +23,14 @@ img{border:none;}
 .views .views_2 dd{ color:#232323; background-color:#fff;padding: 10px 15px 10px 15px; border:1px solid #bdc2ca; border-radius:8px; position:relative; margin-right:17px; margin-bottom:5px; text-align:right; box-shadow:0 2px 5px #768291;min-width:50px; margin-top:15px; line-height:25px; min-height:25px; max-width:70%; float:right;}
 .views_box{ position:fixed; bottom:10px; font-size:1.8em; width:100%;}
 .views_box .views_text input{ border:1px solid #969da3; height:40px; line-height:40px; width:100%; border-radius:3px; font-size:1.1em;}
-.views_box .views_text{ width:60%;}
-.views_box .views_btn input{ height:40px; line-height:40px; background:#ff9018 url(../images/point_org.gif); border-radius:3px; width:100%; text-align:center; border:0; color:#fff; font-size:1.2em;}
-.views_box .views_btn{ width:30%; margin-left:10px;}
+.views_box .views_text{ width:75%;}
+.views_box .views_btn input{ height:40px; line-height:40px; background:#ff9018 url(../images/point_blue.gif); border-radius:3px; width:100%; text-align:center; border:0; color:#fff; font-size:1.2em;}
+.views_box .views_btn{ width:15%; margin-left:10px;}
 #navWrapper{position:absolute;z-index:1;top:50px;bottom:42px;left:0;width:100%;overflow:auto;}
 #navScroller{position:relative;-webkit-tap-highlight-color:rgba(0,0,0,0);float:left;width:100%;padding:0;z-index:200;}
 #contentWrapper{position:absolute;z-index:-1;top:114px;bottom:0px;left:0;width:100%;overflow:auto;}
 #contentScroller{position:relative;-webkit-tap-highlight-color:rgba(0,0,0,0);float:left;width:100%;padding:0;}
-#viewsWrapper{position:absolute;z-index:-1;top:60px;bottom:55px;left:2%;width:96%;overflow:auto;}
+#viewsWrapper{position:absolute;z-index:-1;top:60px;bottom:65px;left:2%;width:96%;overflow:auto;}
 #viewsScroller{position:relative;-webkit-tap-highlight-color:rgba(0,0,0,0);float:left;width:100%;padding:0;}
 .myScrollbarV{position:absolute;z-index:100;width:5px;bottom:7px;top:0px;right:1px}
 .myScrollbarV > div{position:absolute;z-index:100;width:100%;/* The following is probably what you want to customize*/background:rgba(0,0,0,0.3);-webkit-background-clip:padding-box;-moz-background-clip:padding-box;-o-background-clip:padding-box;background-clip:padding-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;-webkit-border-radius:4px;-moz-border-radius:4px;-o-border-radius:4px;border-radius:4px;-webkit-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);-moz-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);-o-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);}

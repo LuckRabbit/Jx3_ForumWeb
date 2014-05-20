@@ -15,11 +15,13 @@
     <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
     <!--<![endif]-->
     <link rel="stylesheet" href="./static/index/common.css?v0.22" />
+    <script src="static/index/jquery.cookie.js"></script>
     <script src="./static/index/game_forum.js?v0.22"></script>
     <script src="./static/index/common.js?v0.22"></script>
     <script src="./static/index/member.js?v0.22"></script>
-    <link rel="stylesheet" href="./static/index/chosen.css"/>
-    <script type="text/javascript" src="./static/index/chosen.jquery.min.js?v0.22"></script></head>
+    <link rel="stylesheet" href="./static/index/chosen.css" />
+    <script type="text/javascript" src="./static/index/chosen.jquery.min.js?v0.22"></script>
+</head>
 <body>
 
 
@@ -118,8 +120,8 @@
     <!-- body -->
     <div class="body">
         <div class="main" style="overflow:visible">
-            
-    </div>
+
+        </div>
     </div>
 
     <!-- footer -->
@@ -150,7 +152,11 @@
     <script>
 
         jQuery(document).ready(function () {
-            
+            //setInterval(function () {
+            //    $("#load").fadeIn(300),
+            //    $("#ajax_config").html("<tr><td colspan=5>Loading...</td></tr>"),
+            //    GetForumList($("#serverlist").val(), $("#typelist").val())
+            //}, 45000)
 
         });
 
