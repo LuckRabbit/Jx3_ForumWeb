@@ -1,0 +1,93 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>登陆页面</title>
+    <meta name="keywords" content="团队事件监控,团队监控,事件监控,剑网3,剑3,插件,剑网3插件,PVE插件,团队插件,副本插件" />
+    <meta name="author" content="临梧@梦江南(Webster Chen)" />
+    <meta name="Description" content="《剑网3》团队事件监控: 剑侠情缘3/剑三最好用的 PVE 辅助插件，提供最新团队事件监控插件下载，更新日志，安史之乱副本最新数据，配置文件，使用教程等，专注于PVE。" />
+    <!--[if lt IE 9]>
+        <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+    <!--<![endif]-->
+    <script src="../static/index/jquery.cookie.js"></script>
+    <link href="../static/index/common.css" rel="stylesheet" />
+</head>
+<body>
+    <script>
+        $(function () {
+            $(document).on("click", "#login_submit", function (event) {
+                var user = $("[name=username]").val()
+                var passwd = $("[name=password]").val()
+                $('.main-center').html('Loading...');
+                $.ajax({
+                    url: "../Data/saveLoginData.aspx",
+                    type: "POST",
+                    data: {
+                        user: user,
+                        userid: passwd
+                    },
+                    success: function (data) {
+                        if (data == "sucess") {
+                            $('.main-center').html('登陆成功！'),
+                            setTimeout(function () {
+                                location.href = "../GF_View.html"
+                            }, 1000)
+                        }
+                        else {
+                            $('.main-center').html('该用户不存在或没有发过贴！'),
+                            setTimeout(function () {
+                                       location.href = "../GF_View.html"
+                                   }, 1000)
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    <div class="body">
+        <div class="main">
+            <div class="body-title">
+                <h4>用户登陆</h4>
+            </div>
+            <div class="main-center">
+                <div style="width:200px;margin:0 auto;">
+                    <div class="brick-form2-item">
+                        <div class="brick-form2-item-title ta-r">角色名</div>
+                        <div class="brick-form2-item-field">
+                            <input type="text" name="username" class="brick-form2-item-text" value="请输入用户名" onfocus="this.value='';" onblur="if(this.value==''){this.value='请输入用户名';}">
+                            <div class="brick-form2-item-note">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brick-form2-item">
+                        <div class="brick-form2-item-title ta-r">角色ID</div>
+                        <div class="brick-form2-item-field">
+                            <input type="text" name="password" class="brick-form2-item-text" value="">
+                            <div class="brick-form2-item-note">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brick-form2-item">
+                        <div class="brick-form2-item-title ta-r" style="color:red;font-size:16px">警告</div>
+                        <div class="brick-form2-item-field">
+                            角色ID对应唯一用户，请不要轻易告诉别人！
+                            <div class="brick-form2-item-note">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="f-tac">
+                    <button id="login_submit" class="brick-btn2 brick-btn2-blue">登录</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
